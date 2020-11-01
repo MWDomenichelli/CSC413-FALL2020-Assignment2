@@ -41,13 +41,14 @@ public class Condition {
     public boolean evaluate(ProgramState programState) {
         int lhsValue = lhs.evaluate(programState);
         int rhsValue = rhs.evaluate(programState);
-        return switch (operator) {
-            case EQUALS -> lhsValue == rhsValue;
-            case NOT_EQUALS -> lhsValue != rhsValue;
-            case LESS_THAN_EQUALS -> lhsValue <= rhsValue;
-            case LESS_THAN -> lhsValue < rhsValue;
-            case GREATER_THAN_EQUALS -> lhsValue >= rhsValue;
-            case GREATER_THAN -> lhsValue > rhsValue;
+         
+	switch (operator) {
+            case EQUALS: return lhsValue == rhsValue;
+            case NOT_EQALS: return lhsValue != rhsValue;
+            case LESS_THAN_EQUALS: return lhsValue <= rhsValue;
+            case LESS_THAN: return lhsValue < rhsValue;
+            case GREATER_THAN_EQUALS: return lhsValue >= rhsValue;
+            case GREATER_THAN: return lhsValue > rhsValue;
         };
     }
 

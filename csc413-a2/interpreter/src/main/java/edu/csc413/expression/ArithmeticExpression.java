@@ -30,9 +30,27 @@ public class ArithmeticExpression extends Expression {
         }
     }
 
+    private final Operator operator;
+    private final Expression lhs;
+    private final Expression rhs;
+
+    public ArithmeticExpression(Operator operator, Expression lhs, Expression rhs)
+    {
+	this.operator = operator;
+	this.lhs = lhs;
+	this.rhs = rhs;
+    }
+
     @Override
     public int evaluate(ProgramState programState) {
-        // TODO: Implement.
-        return 0;
+        int lhsValue = lhs.evaluate(programState);
+	int rhsValue = rhs.evaluate(programState);
+	switch(operator)
+	{
+	   case ADD: return lhsValue + rhsValue;
+	   case SUBTRACT: return lhsValue - rhsValue;
+  	   case MULTIPLY: return lhsValue * rhsValue;
+           case DIVIDE: return lhsValue / rhsValue;
+	}
     }
 }

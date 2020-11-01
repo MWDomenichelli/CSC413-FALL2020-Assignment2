@@ -91,7 +91,7 @@ public class Interpreter {
         if (printMatcher.matches()) {
             String expressionLine = printMatcher.group(1).strip();
 
-            // TODO: Implement.
+            // TODO: Implement. ----------------------
             // The line is in the format:
             //
             //     print(<expression>)
@@ -99,6 +99,7 @@ public class Interpreter {
             // where <expression> is an expression as a String stored in expressionLine. For example, if the full line
             // was "print(10)", expressionLine would be the String "10". Consider how to convert expressionLine into a
             // more usable object when constructing the PrintStatement.
+	    return PrintStatement(expressionLine);
         }
 
         return null;

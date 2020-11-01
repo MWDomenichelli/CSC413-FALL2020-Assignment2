@@ -1,0 +1,17 @@
+package edu.csc413.statement;
+
+public class IfStatment extends Statement
+{
+	private final Condition condition;
+
+	public IfStatement(Condition condition)
+	{
+		this.condition = condition;
+	}
+
+	@Override
+	public void execute()
+	{
+		if(condition.
+	}
+}

@@ -55,7 +55,7 @@ public abstract class Expression {
     private static Expression parseConstantExpression(String expressionString) {
         if (expressionString.matches(CONSTANT_PATTERN.pattern())) {
             int value = Integer.parseInt(expressionString);
-            // TODO: Implement.
+            return ConstantExpression(value);// TODO: Implement.
         }
 
         return null;
