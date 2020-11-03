@@ -10,7 +10,7 @@ public class PrintStatement extends Statement
 	}
 
 	@Override
-	public void execute()
+	public void run()
 	{
 		System.out.println(value);
 	}

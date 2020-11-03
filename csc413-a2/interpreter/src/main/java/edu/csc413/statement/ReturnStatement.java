@@ -10,7 +10,7 @@ public class ReturnStatement extends Statement
 	}
 
 	@Override
-	public void execute()
+	public void run()
 	{
 		
 	}

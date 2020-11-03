@@ -10,7 +10,7 @@ public class AssignStatement extends Statement
 		this.value = value;
 	}
 	@Override
-	public void execute(ProgramState programState)
+	public void run(ProgramState programState)
 	{
 		programState.setVariable(variableName, value);
 	}
